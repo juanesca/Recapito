@@ -1,10 +1,9 @@
 import React from "react";
-import "./Title.css";
 
 export default function Title(props) {
   return (
-    <div className="title-container">
-      <label className="title-label"> {props.text} </label>
+    <div className="title-container d-flex justify-content-center">
+      <label className="title-label d-flex"> {props.text} </label>
     </div>
   );
 }

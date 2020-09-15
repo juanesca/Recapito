@@ -1,10 +1,9 @@
 import React from "react";
 
-
 function Label({ text }) {
   return (
-    <div>
-      <label> {text} </label>
+    <div className="justify-content-center mr-3">
+      <label className="d-flex"> {text} </label>
     </div>
   );
 }

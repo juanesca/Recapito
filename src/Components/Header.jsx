@@ -1,8 +1,10 @@
 import React from "react";
+import { withRouter } from 'react-router-dom';
 
-import "./Header.css";
+function Header(props) {
+  const { history } = props;
 
-export default function Header() {
+
   return (
     <div>
       <header className="navbar navbar-light bg-light shadow-sm">
@@ -10,7 +12,9 @@ export default function Header() {
           {" "}
           RECAPITO{" "}
         </section>
-        <section className="navbar-brand text-center border border-dark w-30 m-0">
+        <section 
+        onClick={()=> history.push('/Perfil')}
+        className="navbar-brand text-center border border-dark w-30 m-0">
           {" "}
           ALGUIEN{" "}
         </section>
@@ -18,3 +22,5 @@ export default function Header() {
     </div>
   );
 }
+
+export default withRouter(Header);

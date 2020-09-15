@@ -1,19 +1,22 @@
 import React from "react";
-import "./Input.css";
 
-function Input({ attribute, handleChange, param }) {
+function Input(props) {
   return (
-    <div className="input-container">
+    <div className="input-container d-flex">
       <input
-        id={attribute.id}
-        name={attribute.name}
-        placeholder={attribute.placeholder}
-        type={attribute.type}
-        onChange={(e) => handleChange(e.target.name, e.target.value)}
-        className="regular-style"
+        id={props.attribute.id}
+        name={props.attribute.name}
+        placeholder={props.attribute.placeholder}
+        type={props.attribute.type}
+        onChange={props.handleChange(
+          props.attribute.name,
+          props.attribute.value
+        )}
+        className="regular-style d-flex"
       ></input>
     </div>
   );
 }
 
 export default Input;
+
